@@ -1,5 +1,8 @@
 require 'roo'
 class Contact < ActiveRecord::Base
+
+	has_one :number, as: :ownable
+
 	def self.import(file)
 
 		sheet = Roo::Spreadsheet.open(file)
@@ -17,7 +20,8 @@ class Contact < ActiveRecord::Base
 				elsif  formatted_number.length == 10
 					formatted_number = "+1#{formatted_number}"
 				end
-				contact = Contact.find_or_create_by(number: formatted_number)
+				number = Number.find_or_create_by(number: formatted_number)
+				contact = Contact.find_or_create_by(ownable: number)
 			end
 		end
 	end

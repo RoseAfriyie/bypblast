@@ -1,0 +1,3 @@
+class Blast < ActiveRecord::Base
+	belongs_to :ownable, polymorphic: true
+end
