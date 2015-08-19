@@ -1,0 +1,4 @@
+<%= simple_form_for @contact, url: contacts_import_path do |f| %>
+  <%= f.input :file, as: :file %>
+  <%= f.button :submit %>
+<% end %>

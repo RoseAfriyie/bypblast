@@ -1,6 +1,22 @@
 Rails.application.routes.draw do
 
+  get 'events/create'
+
+  get 'events/new'
+
+  get 'blasts/new'
+
+  get 'contacts/new_import'
+  
+
+  post "contacts/import" => 'contacts#import'
+
+
   post "messages" => 'messages#create'
+
+  post "blasts" => 'blasts#create'
+
+  post "events" => 'events#create'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

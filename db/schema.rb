@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150819002542) do
+ActiveRecord::Schema.define(version: 20150819064212) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 20150819002542) do
     t.string   "ownable_type"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
+    t.string   "event_id"
   end
 
   add_index "blasts", ["ownable_type", "ownable_id"], name: "index_blasts_on_ownable_type_and_ownable_id", using: :btree

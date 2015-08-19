@@ -1,0 +1,5 @@
+<%= simple_form_for @blast do |f| %>
+  <%= f.input :content %>
+    <%= f.association :event %>
+  <%= f.button :submit %>
+<% end %>

@@ -1,4 +1,4 @@
 class Blast < ActiveRecord::Base
-	belongs_to :ownable, polymorphic: true
+	belongs_to :event
 	has_many :responses
 end

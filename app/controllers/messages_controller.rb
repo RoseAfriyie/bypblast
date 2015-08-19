@@ -25,9 +25,9 @@ class MessagesController < ApplicationController
 
 		#Create dynamic reply based on reply
 		message = "Thanks for letting us know."
-		if params[:Body] == "Yes" || params[:Body] = "yes"
+		if params[:Body] == "Yes" || params[:Body] == "yes"
 			#Response.create(number_id: @sender_number.id, value: "yes")
-		elsif params[:Body] == "No"  || params[:Body] = "no"
+		elsif params[:Body] == "No"  || params[:Body] == "no"
 			#Response.create(number_id: @sender_number.id, value: "no")
 		else
 			message = "Please reply with 'yes' or 'no'."
