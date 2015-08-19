@@ -2,8 +2,8 @@ class BlastsController < ApplicationController
 	def create
   	@blast = Blast.create(blast_params)
 
-  	blast_it = BlastIt.new()
-  	blast_it.send_mass_text()
+  	# blast_it = BlastIt.new()
+  	# blast_it.send_mass_text()
   end
 
   def new
